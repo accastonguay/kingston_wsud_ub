@@ -4102,6 +4102,25 @@ parcel.zoning = 'low_dns_res']]>
 				<![CDATA[]]>
 			</parameter>
 		</Node>
+		<Node>
+			<ClassName value="DM_SQliteCalculator"/>
+			<UUID value="182392048"/>
+			<Name value=""/>
+			<GroupUUID value="45564784"/>
+			<DebugMode value="0"/>
+			<parameter name="attribute">
+				<![CDATA[wsud_points.scenario_id]]>
+			</parameter>
+			<parameter name="attribute_type">
+				<![CDATA[STRING]]>
+			</parameter>
+			<parameter name="query">
+				<![CDATA[UPDATE wsud_points SET scenario_id = (SELECT scenario_id FROM parcel WHERE wsud_points.parcel_id = parcel.OGC_FID)]]>
+			</parameter>
+			<parameter name="variables">
+				<![CDATA[]]>
+			</parameter>
+		</Node>
 	</Nodes>
 	<Links>
 		<Link>
@@ -4880,19 +4899,6 @@ parcel.zoning = 'low_dns_res']]>
 			</InPort>
 			<OutPort>
 				<UUID value = "45720096"/>
-				<PortName value = "city"/>
-				<PortType value = "0"/>
-			</OutPort>
-		</Link>
-		<Link>
-			<BackLink value = "0"/>
-			<InPort>
-				<UUID value = "45564784"/>
-				<PortName value = "out"/>
-				<PortType value = "0"/>
-			</InPort>
-			<OutPort>
-				<UUID value = "45726192"/>
 				<PortName value = "city"/>
 				<PortType value = "0"/>
 			</OutPort>
@@ -6795,6 +6801,32 @@ parcel.zoning = 'low_dns_res']]>
 				<PortType value = "0"/>
 			</OutPort>
 		</Link>
+		<Link>
+			<BackLink value = "0"/>
+			<InPort>
+				<UUID value = "182392048"/>
+				<PortName value = "city"/>
+				<PortType value = "0"/>
+			</InPort>
+			<OutPort>
+				<UUID value = "45726192"/>
+				<PortName value = "city"/>
+				<PortType value = "0"/>
+			</OutPort>
+		</Link>
+		<Link>
+			<BackLink value = "0"/>
+			<InPort>
+				<UUID value = "45564784"/>
+				<PortName value = "out"/>
+				<PortType value = "0"/>
+			</InPort>
+			<OutPort>
+				<UUID value = "182392048"/>
+				<PortName value = "city"/>
+				<PortType value = "0"/>
+			</OutPort>
+		</Link>
 	</Links>
 </DynaMindCore>
 <DynaMindGUI>
@@ -6867,8 +6899,8 @@ parcel.zoning = 'low_dns_res']]>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="43270032"/>
-			<GUI_PosX value="2529.31"/>
-			<GUI_PosY value="482.427"/>
+			<GUI_PosX value="2542.27"/>
+			<GUI_PosY value="420.886"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
@@ -6939,26 +6971,26 @@ parcel.zoning = 'low_dns_res']]>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="43420096"/>
-			<GUI_PosX value="2869.8"/>
-			<GUI_PosY value="481.112"/>
+			<GUI_PosX value="2882.76"/>
+			<GUI_PosY value="419.571"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="43426160"/>
-			<GUI_PosX value="2852.77"/>
-			<GUI_PosY value="639.774"/>
+			<GUI_PosX value="2865.73"/>
+			<GUI_PosY value="578.233"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="43459808"/>
-			<GUI_PosX value="5616.11"/>
-			<GUI_PosY value="639.288"/>
+			<GUI_PosX value="5629.07"/>
+			<GUI_PosY value="577.747"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="43467200"/>
-			<GUI_PosX value="3810.54"/>
-			<GUI_PosY value="640.462"/>
+			<GUI_PosX value="3823.5"/>
+			<GUI_PosY value="578.921"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
@@ -7047,8 +7079,8 @@ parcel.zoning = 'low_dns_res']]>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45377648"/>
-			<GUI_PosX value="4037.1"/>
-			<GUI_PosY value="725.05"/>
+			<GUI_PosX value="4065.17"/>
+			<GUI_PosY value="582.533"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
@@ -7137,8 +7169,8 @@ parcel.zoning = 'low_dns_res']]>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45541696"/>
-			<GUI_PosX value="6267.5"/>
-			<GUI_PosY value="627.92"/>
+			<GUI_PosX value="6280.46"/>
+			<GUI_PosY value="566.379"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
@@ -7161,68 +7193,68 @@ parcel.zoning = 'low_dns_res']]>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45564784"/>
-			<GUI_PosX value="4358.12"/>
-			<GUI_PosY value="721.689"/>
+			<GUI_PosX value="4382.95"/>
+			<GUI_PosY value="587.809"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45679376"/>
-			<GUI_PosX value="2312.33"/>
-			<GUI_PosY value="384.553"/>
+			<GUI_PosX value="3075.6"/>
+			<GUI_PosY value="389.333"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45673728"/>
-			<GUI_PosX value="2312.33"/>
-			<GUI_PosY value="384.553"/>
+			<GUI_PosX value="1843.85"/>
+			<GUI_PosY value="193.337"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45687936"/>
-			<GUI_PosX value="2312.33"/>
-			<GUI_PosY value="384.553"/>
+			<GUI_PosX value="3120.22"/>
+			<GUI_PosY value="209.271"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45694192"/>
-			<GUI_PosX value="2312.33"/>
-			<GUI_PosY value="384.553"/>
+			<GUI_PosX value="2150.02"/>
+			<GUI_PosY value="220.216"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45700048"/>
-			<GUI_PosX value="2312.33"/>
-			<GUI_PosY value="384.553"/>
+			<GUI_PosX value="2117.17"/>
+			<GUI_PosY value="380.06"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45675040"/>
-			<GUI_PosX value="5825.94"/>
-			<GUI_PosY value="963.211"/>
+			<GUI_PosX value="5838.9"/>
+			<GUI_PosY value="901.67"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45705616"/>
-			<GUI_PosX value="4995.08"/>
-			<GUI_PosY value="964.201"/>
+			<GUI_PosX value="5008.04"/>
+			<GUI_PosY value="902.66"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45720096"/>
-			<GUI_PosX value="2312.33"/>
-			<GUI_PosY value="384.553"/>
+			<GUI_PosX value="2075.89"/>
+			<GUI_PosY value="558.154"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45726192"/>
-			<GUI_PosX value="2312.33"/>
-			<GUI_PosY value="384.553"/>
+			<GUI_PosX value="3008.87"/>
+			<GUI_PosY value="555.734"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45732224"/>
-			<GUI_PosX value="4633.84"/>
-			<GUI_PosY value="725.931"/>
+			<GUI_PosX value="4658.67"/>
+			<GUI_PosY value="586.653"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
@@ -7293,14 +7325,14 @@ parcel.zoning = 'low_dns_res']]>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45887824"/>
-			<GUI_PosX value="5000.13"/>
-			<GUI_PosY value="764.62"/>
+			<GUI_PosX value="5013.09"/>
+			<GUI_PosY value="703.079"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45892128"/>
-			<GUI_PosX value="3916.97"/>
-			<GUI_PosY value="861.665"/>
+			<GUI_PosX value="3929.93"/>
+			<GUI_PosY value="800.124"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
@@ -7329,14 +7361,14 @@ parcel.zoning = 'low_dns_res']]>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45920384"/>
-			<GUI_PosX value="3912.72"/>
-			<GUI_PosY value="1023.79"/>
+			<GUI_PosX value="3925.68"/>
+			<GUI_PosY value="962.249"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45926448"/>
-			<GUI_PosX value="3908.6"/>
-			<GUI_PosY value="1190.75"/>
+			<GUI_PosX value="3921.56"/>
+			<GUI_PosY value="1129.21"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
@@ -7347,20 +7379,20 @@ parcel.zoning = 'low_dns_res']]>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="45937744"/>
-			<GUI_PosX value="3481.5"/>
-			<GUI_PosY value="271.607"/>
+			<GUI_PosX value="3494.46"/>
+			<GUI_PosY value="210.066"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="46029456"/>
-			<GUI_PosX value="3778.72"/>
-			<GUI_PosY value="271.69"/>
+			<GUI_PosX value="3791.68"/>
+			<GUI_PosY value="210.149"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="46121744"/>
-			<GUI_PosX value="5529.88"/>
-			<GUI_PosY value="1345.11"/>
+			<GUI_PosX value="5542.84"/>
+			<GUI_PosY value="1283.57"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
@@ -7767,20 +7799,20 @@ parcel.zoning = 'low_dns_res']]>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="46963168"/>
-			<GUI_PosX value="3158.73"/>
-			<GUI_PosY value="270.377"/>
+			<GUI_PosX value="3171.69"/>
+			<GUI_PosY value="208.836"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="47055296"/>
-			<GUI_PosX value="2856.68"/>
-			<GUI_PosY value="272.233"/>
+			<GUI_PosX value="2869.64"/>
+			<GUI_PosY value="210.692"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="47043184"/>
-			<GUI_PosX value="2542.78"/>
-			<GUI_PosY value="273.293"/>
+			<GUI_PosX value="2555.74"/>
+			<GUI_PosY value="211.752"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
@@ -7827,8 +7859,8 @@ parcel.zoning = 'low_dns_res']]>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="47186720"/>
-			<GUI_PosX value="2581.29"/>
-			<GUI_PosY value="1190.53"/>
+			<GUI_PosX value="2594.25"/>
+			<GUI_PosY value="1128.99"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
@@ -7857,20 +7889,20 @@ parcel.zoning = 'low_dns_res']]>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="47217456"/>
-			<GUI_PosX value="4861.53"/>
-			<GUI_PosY value="1353.76"/>
+			<GUI_PosX value="4874.49"/>
+			<GUI_PosY value="1292.22"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="47223104"/>
-			<GUI_PosX value="3913.37"/>
-			<GUI_PosY value="1359.09"/>
+			<GUI_PosX value="3926.33"/>
+			<GUI_PosY value="1297.55"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="47226208"/>
-			<GUI_PosX value="3521.59"/>
-			<GUI_PosY value="642.568"/>
+			<GUI_PosX value="3534.55"/>
+			<GUI_PosY value="581.027"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
@@ -7947,20 +7979,20 @@ parcel.zoning = 'low_dns_res']]>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="47391504"/>
-			<GUI_PosX value="2537.64"/>
-			<GUI_PosY value="636.085"/>
+			<GUI_PosX value="2550.6"/>
+			<GUI_PosY value="574.544"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="47397792"/>
-			<GUI_PosX value="3710.69"/>
-			<GUI_PosY value="466.595"/>
+			<GUI_PosX value="3723.65"/>
+			<GUI_PosY value="405.054"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
 			<GUI_UUID value="47402656"/>
-			<GUI_PosX value="3236.83"/>
-			<GUI_PosY value="642.997"/>
+			<GUI_PosX value="3249.79"/>
+			<GUI_PosY value="581.456"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
@@ -7979,6 +8011,12 @@ parcel.zoning = 'low_dns_res']]>
 			<GUI_UUID value="47500256"/>
 			<GUI_PosX value="5.03356e-23"/>
 			<GUI_PosY value="274.351"/>
+			<GUI_Minimized value="0"/>
+		</GUI_Node>
+		<GUI_Node>
+			<GUI_UUID value="182392048"/>
+			<GUI_PosX value="4110.72"/>
+			<GUI_PosY value="554.404"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 	</GUI_Nodes>
